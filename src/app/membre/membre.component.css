@@ -1,0 +1,25 @@
+.demo-table {
+    width: 100%;
+}
+
+.mat-column-id {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-name {
+    padding-left: 16px;
+    font-size: 20px;
+}
+
+.mat-column-cin {
+    font-style: italic;
+}
+
+.mat-column-cv {
+    width: 32px;
+    text-align: center;
+    font-weight: bold;
+}
