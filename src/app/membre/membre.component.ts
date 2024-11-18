@@ -14,6 +14,7 @@ export class MembreComponent implements OnInit {
     'type',
     'cv',
     'createdDate',
+    'action',
   ];
   constructor(private memberService: MembreService) {}
   dataSource: any[] = [];

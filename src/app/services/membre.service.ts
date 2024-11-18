@@ -12,4 +12,7 @@ export class MembreService {
   getAllMembers(): Observable<any[]> {
     return this.httpClient.get<any[]>('http://localhost:3000/members');
   }
+  inserMember(membre: any): Observable<any> {
+    return this.httpClient.post('http://localhost:3000/members', membre);
+  }
 }
