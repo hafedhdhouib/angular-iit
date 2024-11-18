@@ -23,4 +23,11 @@ export class MembreComponent implements OnInit {
       this.dataSource = data;
     });
   }
+  delete(id: number): void {
+    this.memberService.deleteById(id).subscribe((data) => {
+      this.memberService.getAllMembers().subscribe((data) => {
+        this.dataSource = data;
+      });
+    });
+  }
 }

@@ -1,8 +1,6 @@
 <section>
-  <div class="example-label">Basic</div>
   <div class="example-button-row">
     <button routerLink="/create" mat-raised-button>New member</button>
-    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
   </div>
 </section>
 
@@ -45,7 +43,7 @@
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef>action</th>
     <td mat-cell *matCellDef="let element">
-      <mat-icon>delete</mat-icon>
+      <mat-icon (click)="delete(element.id)">delete</mat-icon>
       <mat-icon>edit</mat-icon>
     </td>
   </ng-container>
