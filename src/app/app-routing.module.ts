@@ -14,6 +14,11 @@ const routes: Routes = [
     pathMatch: 'full',
     component: MemberFormComponent,
   },
+  {
+    path: 'edit/:id',
+    pathMatch: 'full',
+    component: MemberFormComponent,
+  },
 ];
 
 @NgModule({

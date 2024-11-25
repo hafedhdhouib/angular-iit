@@ -1,19 +1,12 @@
 {
   "members": [
     {
-      "id": "2",
-      "cin": "123",
-      "name": "hafedh",
-      "type": "teacher",
-      "cv": "lien",
-      "createdDate": "12/12/2022"
+      "body": true,
+      "id": "2"
     },
     {
-      "id": "12d9",
-      "cin": "123",
-      "name": "hafedh",
-      "cv": "000",
-      "type": "111"
+      "body": true,
+      "id": "12d9"
     }
   ]
 }

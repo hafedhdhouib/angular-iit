@@ -15,9 +15,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { ConfirmeDialogueComponent } from './confirme-dialogue/confirme-dialogue.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [AppComponent, MembreComponent, MemberFormComponent],
+  declarations: [
+    AppComponent,
+    MembreComponent,
+    MemberFormComponent,
+    ConfirmeDialogueComponent,
+  ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -31,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatCardModule,
     MatIconModule,
+    MatDialogModule,
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],

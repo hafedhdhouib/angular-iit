@@ -43,8 +43,9 @@
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef>action</th>
     <td mat-cell *matCellDef="let element">
-      <mat-icon (click)="delete(element.id)">delete</mat-icon>
-      <mat-icon>edit</mat-icon>
+      <mat-icon (click)="open(element.id)">delete</mat-icon>
+      <!--string interpolution-->
+      <mat-icon routerLink="/edit/{{ element.id }}">edit</mat-icon>
     </td>
   </ng-container>
 

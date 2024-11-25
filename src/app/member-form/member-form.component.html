@@ -1,5 +1,9 @@
 <mat-card class="form-card">
   <form [formGroup]="forms" (ngSubmit)="sub()">
+    <mat-form-field appearance="fill" style="display: none">
+      <mat-label>CIN</mat-label>
+      <input matInput placeholder="Entrez votre CIN" formControlName="cin" />
+    </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>CIN</mat-label>
       <input matInput placeholder="Entrez votre CIN" formControlName="cin" />

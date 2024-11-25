@@ -18,4 +18,13 @@ export class MembreService {
   deleteById(id: number): Observable<void> {
     return this.httpClient.delete<void>(`http://localhost:3000/members/${id}`);
   }
+  getMemberByid(id: string): Observable<any> {
+    return this.httpClient.get(`http://localhost:3000/members/${id}`);
+  }
+  updateByid(member: any, id: string): Observable<any> {
+    return this.httpClient.put<any>(
+      `http://localhost:3000/members/${id}`,
+      member
+    );
+  }
 }
