@@ -32,7 +32,7 @@ export class MemberFormComponent implements OnInit {
       });
     } else {
       this.forms = new FormGroup({
-        cin: new FormControl([Validators.required]),
+        cin: new FormControl('', [Validators.required]),
         name: new FormControl(null, [Validators.required]),
         cv: new FormControl(null, [Validators.required]),
         type: new FormControl(null, [Validators.required]),
@@ -42,7 +42,7 @@ export class MemberFormComponent implements OnInit {
   sub(): void {
     if (this.idCourant) {
       this.memberService
-        .updateByid(this.forms.valid, this.idCourant)
+        .updateByid(this.forms.value, this.idCourant)
         .subscribe((e) => {
           this.router.navigate(['']);
         });

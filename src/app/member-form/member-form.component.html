@@ -1,25 +1,37 @@
 <mat-card class="form-card">
   <form [formGroup]="forms" (ngSubmit)="sub()">
-    <mat-form-field appearance="fill" style="display: none">
-      <mat-label>CIN</mat-label>
-      <input matInput placeholder="Entrez votre CIN" formControlName="cin" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>CIN</mat-label>
-      <input matInput placeholder="Entrez votre CIN" formControlName="cin" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Nom</mat-label>
-      <input matInput placeholder="Entrez votre nom" formControlName="name" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>CV</mat-label>
-      <input matInput placeholder="Entrez votre CV" formControlName="cv" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Type</mat-label>
-      <input matInput placeholder="Entrez le type" formControlName="type" />
-    </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Soumettre</button>
+    <div>
+      <mat-form-field appearance="fill" style="display: none">
+        <mat-label>ID</mat-label>
+        <input matInput placeholder="Entrez votre CIN" formControlName="cin" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>CIN</mat-label>
+        <input matInput placeholder="Entrez votre CIN" formControlName="cin" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input matInput placeholder="Entrez votre nom" formControlName="name" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>CV</mat-label>
+        <input matInput placeholder="Entrez votre CV" formControlName="cv" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <input matInput placeholder="Entrez le type" formControlName="type" />
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" type="submit">Soumettre</button>
+    </div>
   </form>
 </mat-card>
