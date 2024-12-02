@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path: 'member',
+    path: '',
     pathMatch: 'full',
     component: MembreComponent,
   },

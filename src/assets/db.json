@@ -28,5 +28,14 @@
       "cv": "10",
       "type": "10"
     }
+  ],
+  "events": [
+    {
+      "id": "10",
+      "title": "conf",
+      "dateDebut": "12/12/2024",
+      "dateFin": "12/12/2025",
+      "Lieu": "sfax"
+    }
   ]
 }
