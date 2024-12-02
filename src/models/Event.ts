@@ -1,4 +1,4 @@
-export interface Events {
+export interface Evt {
   id: String;
   title: String;
   dateDebut: String;
