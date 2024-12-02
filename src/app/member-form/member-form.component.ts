@@ -32,7 +32,7 @@ export class MemberFormComponent implements OnInit {
       });
     } else {
       this.forms = new FormGroup({
-        cin: new FormControl('', [Validators.required]),
+        cin: new FormControl('/member', [Validators.required]),
         name: new FormControl(null, [Validators.required]),
         cv: new FormControl(null, [Validators.required]),
         type: new FormControl(null, [Validators.required]),
@@ -44,11 +44,11 @@ export class MemberFormComponent implements OnInit {
       this.memberService
         .updateByid(this.forms.value, this.idCourant)
         .subscribe((e) => {
-          this.router.navigate(['']);
+          this.router.navigate(['/member']);
         });
     } else {
       this.memberService.inserMember(this.forms.value).subscribe((e) => {
-        this.router.navigate(['']);
+        this.router.navigate(['/member']);
       });
     }
     console.log(this.forms.value);
