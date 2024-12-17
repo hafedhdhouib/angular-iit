@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { Evt } from 'src/models/Event';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 
 @Component({
@@ -40,6 +40,15 @@ export class EventComponent implements OnInit {
           }
         });
       }
+    });
+  }
+  openToUpdate(id: string): void {
+    const dialogConfig = new MatDialogConfig();
+    this.Es.getEventByID(id).subscribe((e) => {
+      dialogConfig.data = e;
+      dialogConfig.width = '400px';
+      dialogConfig.height = '300px';
+      let dialogRef = this.dialog.open(ModalComponent, dialogConfig);
     });
   }
 }
