@@ -30,6 +30,7 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { firebaseConfig } from './environnement/environnement';
 import { LoginComponent } from './login/login.component';
 import { FirebaseModule } from 'src/Firebase.module';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { FirebaseModule } from 'src/Firebase.module';
     EventComponent,
     ToolComponent,
     LoginComponent,
+    ModalComponent,
   ],
   imports: [
     FirebaseModule,

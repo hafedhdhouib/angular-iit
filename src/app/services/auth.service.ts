@@ -53,6 +53,16 @@ export class AuthService {
   //     return this.afAuth.signInWithPopup(new firebase.auth.TwitterAuthProvider());
   // }
 
+  login(email: string, password: string) {
+    return this.afAuth.signInWithEmailAndPassword(email, password)
+      .then((result) => {
+        console.log('User logged in:', result.user);
+      })
+      .catch((error) => {
+        console.error('Error during login:', error.message);
+      });
+  }
+
   doGoogleLogin(): Promise<any> {
     return this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
   }

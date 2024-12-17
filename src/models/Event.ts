@@ -1,7 +1,7 @@
 export interface Evt {
   id: String;
-  title: String;
+  titre: String;
   dateDebut: String;
   dateFin: String;
-  Lieu: String;
+  lieu: String;
 }

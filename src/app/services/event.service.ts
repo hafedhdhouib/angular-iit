@@ -9,6 +9,9 @@ import { Evt } from 'src/models/Event';
 export class EventService {
   constructor(private httpClient: HttpClient) {}
   getAllEvent(): Observable<Evt[]> {
-    return this.httpClient.get<Evt[]>('http://localhost:3000/events');
+    return this.httpClient.get<Evt[]>('http://localhost:3000/Evt');
+  }
+  addEvent(event: Evt): Observable<Evt> {
+    return this.httpClient.post<Evt>('http://localhost:3000/Evt', event);
   }
 }
