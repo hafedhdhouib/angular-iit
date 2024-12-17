@@ -13,8 +13,8 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       title: new FormControl(null, [Validators.required]),
-      dateDebut: new FormControl(null, [Validators.required]),
-      dateFin: new FormControl(null, [Validators.required]),
+      dateDebut: new FormControl<Date | null>(null),
+      dateFin: new FormControl<Date | null>(null),
       lieu: new FormControl(null, [Validators.required]),
     });
   }

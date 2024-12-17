@@ -11,6 +11,9 @@ export class EventService {
   getAllEvent(): Observable<Evt[]> {
     return this.httpClient.get<Evt[]>('http://localhost:3000/Evt');
   }
+  getEvent(id: string): Observable<Evt> {
+    return this.httpClient.get<Evt>(`http://localhost:3000/Evt/${id}`);
+  }
   addEvent(event: Evt): Observable<Evt> {
     return this.httpClient.post<Evt>('http://localhost:3000/Evt', event);
   }

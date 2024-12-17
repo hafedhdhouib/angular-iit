@@ -32,7 +32,7 @@ export class MemberFormComponent implements OnInit {
       });
     } else {
       this.forms = new FormGroup({
-        cin: new FormControl('/member', [Validators.required]),
+        cin: new FormControl(null, [Validators.required]),
         name: new FormControl(null, [Validators.required]),
         cv: new FormControl(null, [Validators.required]),
         type: new FormControl(null, [Validators.required]),
