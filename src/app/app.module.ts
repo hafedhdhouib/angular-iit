@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
 import { MembreComponent } from './membre/membre.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +35,7 @@ import { firebaseConfig } from './environnement/environnement';
 import { LoginComponent } from './login/login.component';
 import { FirebaseModule } from 'src/Firebase.module';
 import { ModalComponent } from './modal/modal.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ModalComponent } from './modal/modal.component';
     ModalComponent,
   ],
   imports: [
+    MatSortModule,
     MatNativeDateModule,
+    MatPaginatorModule,
     FirebaseModule,
     FormsModule,
     ReactiveFormsModule,
