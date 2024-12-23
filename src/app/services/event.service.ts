@@ -8,6 +8,13 @@ import { Evt } from 'src/models/Event';
 })
 export class EventService {
   constructor(private httpClient: HttpClient) {}
+  
+  updateByID(event: any): Observable<any> {
+  return this.httpClient.put<any>(
+    `http://localhost:3000/Evt/${event.id}`,
+    event
+    );
+  }
   getAllEvent(): Observable<Evt[]> {
     return this.httpClient.get<Evt[]>('http://localhost:3000/Evt');
   }

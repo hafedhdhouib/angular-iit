@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Evt } from 'src/models/Event';
 
 @Component({
   selector: 'app-modal',
@@ -8,16 +9,26 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./modal.component.css'],
 })
 export class ModalComponent implements OnInit {
-  constructor(private dialogRef: MatDialogRef<ModalComponent>) {}
+  event!: Evt;
   form!: FormGroup;
-  ngOnInit(): void {
+  constructor(
+    private dialogRef: MatDialogRef<ModalComponent>,
+    @Inject(MAT_DIALOG_DATA) data: Evt
+  ) {
+    this.event = data;
     this.form = new FormGroup({
-      title: new FormControl(null, [Validators.required]),
-      dateDebut: new FormControl<Date | null>(null),
-      dateFin: new FormControl<Date | null>(null),
-      lieu: new FormControl(null, [Validators.required]),
+      id: new FormControl(this.event ? this.event.id : null),
+      title: new FormControl(this.event ? this.event.title : null, [
+        Validators.required,
+      ]),
+      dateDebut: new FormControl(this.event ? this.event.dateDebut : null),
+      dateFin: new FormControl(this.event ? this.event.dateFin : null),
+      lieu: new FormControl(this.event ? this.event.lieu : null, [
+        Validators.required,
+      ]),
     });
   }
+  ngOnInit(): void {}
 
   save() {
     this.dialogRef.close(this.form.value);

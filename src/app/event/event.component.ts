@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
-import { Evt } from 'src/models/Event';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
@@ -49,6 +48,16 @@ export class EventComponent implements OnInit {
       dialogConfig.width = '400px';
       dialogConfig.height = '300px';
       let dialogRef = this.dialog.open(ModalComponent, dialogConfig);
+      dialogRef.afterClosed().subscribe((res) => {
+        if (res) {
+          console.log(res);
+          this.Es.updateByID(res).subscribe(() => {
+            this.Es.getAllEvent().subscribe((data) => {
+              this.dataSource.data = data;
+            });
+          });
+        }
+      });
     });
   }
 }
