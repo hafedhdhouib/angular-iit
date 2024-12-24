@@ -36,6 +36,8 @@ import { LoginComponent } from './login/login.component';
 import { FirebaseModule } from 'src/Firebase.module';
 import { ModalComponent } from './modal/modal.component';
 import { MatSortModule } from '@angular/material/sort';
+import { ModalPubComponent } from './modal-pub/modal-pub.component';
+import { PubDetailsComponent } from './pub-details/pub-details.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { MatSortModule } from '@angular/material/sort';
     ToolComponent,
     LoginComponent,
     ModalComponent,
+    ModalPubComponent,
+    PubDetailsComponent,
   ],
   imports: [
     MatSortModule,

@@ -1,0 +1,43 @@
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="title"
+      formControlName="Titre"
+    /> </mat-form-field
+  ><br />
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Type"
+      formControlName="Type"
+    /> </mat-form-field
+  ><br />
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="lieu"
+      formControlName="Lien"
+    /> </mat-form-field
+  ><br />
+  <mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input formControlName="Date" matInput [matDatepicker]="picker" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker> </mat-form-field
+  ><br />
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Sourcepdf"
+      formControlName="Sourcepdf"
+    /> </mat-form-field
+  ><br />
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

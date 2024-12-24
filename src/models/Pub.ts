@@ -1,5 +1,5 @@
 export interface Pub {
-  Id: number;
+  id: number;
   Titre: String;
   Type: string;
   Lien: string;
