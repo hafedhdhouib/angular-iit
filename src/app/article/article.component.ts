@@ -55,6 +55,7 @@ export class ArticleComponent implements OnInit, AfterViewInit {
     let dialogConfig = new MatDialogConfig();
     this.pubService.getById(id).subscribe((data) => {
       dialogConfig.data = data;
+      dialogConfig.width = '200px';
       let dialogRef = this.dialog.open(PubDetailsComponent, dialogConfig);
     });
   }

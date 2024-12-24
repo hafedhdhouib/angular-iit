@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { Pub } from 'src/models/Pub';
 
 @Component({
   selector: 'app-pub-details',
@@ -11,6 +12,8 @@ export class PubDetailsComponent {
     private dialogueRef: MatDialog,
     @Inject(MAT_DIALOG_DATA) data: any
   ) {
-    console.log(data);
+    this.pub = data;
   }
+
+  pub!: Pub;
 }
