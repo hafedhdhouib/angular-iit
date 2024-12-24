@@ -5,21 +5,33 @@
       "cin": "10",
       "name": "10",
       "cv": "10",
-      "type": "10"
+      "type": "Student",
+      "tab_evt": [
+        "10",
+        "9207"
+      ]
     },
     {
       "id": "3f0c",
       "cin": "11",
       "name": "hafedh",
       "cv": "dhdh",
-      "type": "hh"
+      "type": "Teacher",
+      "tab_evt": [
+        "10",
+        "9207"
+      ]
     },
     {
       "id": "a4ce",
       "cin": "100",
       "name": "10",
       "cv": "10",
-      "type": "10"
+      "type": "Student",
+      "tab_evt": [
+        "10",
+        "9207"
+      ]
     }
   ],
   "Evt": [

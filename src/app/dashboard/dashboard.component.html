@@ -24,3 +24,34 @@
     </mat-card-header>
   </mat-card>
 </div>
+<div>
+  <div
+    class="chart-wrapper"
+    style="
+      display: grid;
+      grid-template-columns: 500px 500px;
+      justify-content: space-around;
+    "
+  >
+    <div>
+      <canvas
+        baseChart
+        [type]="'pie'"
+        [datasets]="chartDataPie"
+        [labels]="chartLabelsPie"
+        [options]="chartOptions"
+      >
+      </canvas>
+    </div>
+    <div>
+      <canvas
+        baseChart
+        [type]="'line'"
+        [datasets]="chartDataLine"
+        [labels]="chartLabelsLine"
+        [options]="chartOptions"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

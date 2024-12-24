@@ -39,6 +39,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { ModalPubComponent } from './modal-pub/modal-pub.component';
 import { PubDetailsComponent } from './pub-details/pub-details.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     PubDetailsComponent,
   ],
   imports: [
+    NgChartsModule,
     MatGridListModule,
     MatSortModule,
     MatNativeDateModule,
